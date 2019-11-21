@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3912053499070056343}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: suma1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

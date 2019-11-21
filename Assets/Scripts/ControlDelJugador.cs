@@ -8,6 +8,8 @@ public class ControlDelJugador : MonoBehaviour
     //Almacena componente RigiBody del personaje jugador
     Rigidbody rb;
     public float velocidad;
+    int numItem1;
+    int numItem2;
 
     public void FixedUpdate()
     {
@@ -37,12 +39,24 @@ public class ControlDelJugador : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        contador = contador + 1;
+
+        if (other.tag == "suma1")
+        {
+            Destroy(other.gameObject);
+            contador = contador + 1;
+            numItem1 = numItem1 + 1;
+        }
+        else if (other.tag == "suma2")
+        {
+            Destroy(other.gameObject);
+            contador = contador + 2;
+            numItem2 = numItem2 + 1;
+        }
         ActualizarMarcador();
-        if(contador >= 4)
+        if (contador >= 9)
         {
             findejuego.gameObject.SetActive(true);
         }
+
     }
 }
